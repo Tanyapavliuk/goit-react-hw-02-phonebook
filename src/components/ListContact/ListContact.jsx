@@ -1,9 +1,10 @@
+
 import { List } from './ListContact.styled'
 
 const ListContact = ({ children }) => {
     return (
     <List>
-           {children}
+        {children}
     </List>
     ) 
 }
