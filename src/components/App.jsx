@@ -18,7 +18,7 @@ class App extends Component{
   }
   handlerAddContact = (newContact) => { // з ContactForm приймаємо данні про новий контакт
     if (this.state.contacts !== '') {
-      if (this.state.contacts.some(el => el.name.includes(newContact.name))) { // якщо масив має така ім'я виводимо повідомлення
+      if (this.state.contacts.some(el => el.name.toLowerCase().includes(newContact.name.toLowerCase()))) { // якщо масив має така ім'я виводимо повідомлення
         alert(`${newContact.name} is alredy in contacs`);
         return
       }
